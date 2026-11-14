@@ -2,7 +2,7 @@
 
 WaiShe 的 Razer 设备驱动：用户态的协议适配器，由 WaiShe Bridge 加载。不是操作系统驱动。
 
-**当前阶段：M0 技术验证。尚无驱动代码；协议已用一次性探测程序在实机上验证。**
+**当前阶段：0.1.0，DeathAdder V3 Pro 的 2.4G 接收器模式已在 WaiShe Bridge 中实机验收（M1，2026-11-14）。有线模式尚未在本项目验证。** 构建：`cargo build --release --target wasm32-unknown-unknown`；测试：先构建再 `cargo test`；打包：用 `waishe-driver-sdk` 的 `waishe-driver-dev pack`。
 
 ## 设备支持
 
