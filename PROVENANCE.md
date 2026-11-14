@@ -11,8 +11,8 @@
 
 | 来源 | 许可证 | 状态 | 使用方式 | 涉及文件 | 来源版本 |
 | --- | --- | --- | --- | --- | --- |
+| [OpenMouse mouse-protocol](https://github.com/OpenMouse-Project/mouse-protocol) | AGPL-3.0 | **选定为主要移植来源**（需求 Q10，2026-11-14），尚未引入代码 | 计划逐段移植：`src/razer/codec.ts`、`src/razer/devices.ts`、`src/drivers/razer/hid.ts`；对照 `captures/razer-deathadder-v3-pro/`（含有线模式抓包）。每个移植的文件在此单列一行，写明源文件与提交哈希 | — | 主分支，2026-11-14 读取文件列表 |
 | [openrazer](https://github.com/openrazer/openrazer) | GPL-2.0-or-later | 协议事实已用于实机验证，尚未引入代码 | 仅参考：`driver/razermouse_driver.h` 的产品 ID；`driver/razercommon.h` 的报文结构与应答状态；`driver/razercommon.c` 的校验算法；`driver/razerchromacommon.c` 的命令构造（固件、序列号、电量、充电、DPI 读写、回报率读写）；`driver/razermouse_driver.c` 中本设备使用的事务 ID `0x1F` 与命令选择 | `docs/deathadder-v3-pro.md` | 主分支，2026-11-14 读取 |
-| [OpenMouse mouse-protocol](https://github.com/OpenMouse-Project/mouse-protocol) | AGPL-3.0 | 计划参考，尚未引入代码 | — | — | — |
 | 本项目抓包 | — | 已记录 | DeathAdder V3 Pro 固件 v2.2、接收器 `1532:00B7`，Windows 11 | `captures/deathadder-v3-pro-receiver-2026-11-14.md` | 2026-11-14 |
 
 ## 许可证兼容性
