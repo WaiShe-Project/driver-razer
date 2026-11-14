@@ -1,0 +1,73 @@
+[[device]]
+model = "deathadder-v3-pro"
+name = "Razer DeathAdder V3 Pro"
+brand = "Razer"
+kind = "mouse"
+
+  [[device.endpoint]]
+  transport = "wired"
+  product_id = 0x00B6
+
+  [[device.endpoint]]
+  transport = "receiver"
+  product_id = 0x00B7
+
+  [[device.endpoint]]
+  transport = "wired"
+  product_id = 0x00C2
+
+  # Receiver, verified by this project (M0, firmware 2.2).
+  [[device.verification]]
+  capability = "battery.level"
+  transport = "receiver"
+  level = "verified"
+  firmware = "2.2"
+  verified_by = "icew1ndy"
+  verified_on = "2026-11-14"
+
+  [[device.verification]]
+  capability = "battery.charging"
+  transport = "receiver"
+  level = "verified"
+  firmware = "2.2"
+  verified_by = "icew1ndy"
+  verified_on = "2026-11-14"
+  note = "仅验证了“未充电”"
+
+  [[device.verification]]
+  capability = "link.state"
+  transport = "receiver"
+  level = "verified"
+  firmware = "2.2"
+  verified_by = "icew1ndy"
+  verified_on = "2026-11-14"
+
+  [[device.verification]]
+  capability = "mouse.dpi"
+  transport = "receiver"
+  level = "verified"
+  firmware = "2.2"
+  verified_by = "icew1ndy"
+  verified_on = "2026-11-14"
+
+  [[device.verification]]
+  capability = "mouse.polling_rate"
+  transport = "receiver"
+  level = "verified"
+  firmware = "2.2"
+  verified_by = "icew1ndy"
+  verified_on = "2026-11-14"
+  note = "1000 与 500 Hz；125 Hz 未测"
+
+  # Wired: verified by OpenMouse on 0x00B6, not yet by this project.
+  [[device.verification]]
+  capability = "mouse.dpi"
+  transport = "wired"
+  level = "inferred"
+  note = "OpenMouse 在 0x00B6 上实机验证（captures/razer-deathadder-v3-pro/wired-*）"
+
+  [[device.verification]]
+  capability = "mouse.polling_rate"
+  transport = "wired"
+  level = "inferred"
+  note = "OpenMouse 在 0x00B6 上实机验证"

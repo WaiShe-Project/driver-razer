@@ -1,0 +1,17 @@
+[driver]
+id = "razer"
+name = "Razer"
+version = "0.1.0"
+api = "0.1"
+license = "AGPL-3.0-or-later"
+repository = "https://github.com/WaiShe-Project/driver-razer"
+description = "Razer 鼠标：电量、充电、连接、DPI、回报率"
+
+# DeathAdder V3 Pro. The control channel is the Generic Desktop Mouse collection on interface 0;
+# Windows reserves it for the system, so the host opens it with zero access (verified in M0).
+[[match]]
+vendor_id = 0x1532
+product_ids = [0x00B6, 0x00B7, 0x00C2]
+interface_number = 0
+usage_page = 0x0001
+usage = 0x0002

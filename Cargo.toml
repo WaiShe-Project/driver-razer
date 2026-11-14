@@ -1,0 +1,25 @@
+[package]
+name = "driver-razer"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.90"
+license = "AGPL-3.0-or-later"
+repository = "https://github.com/WaiShe-Project/driver-razer"
+description = "WaiShe driver for Razer mice"
+publish = false
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+waishe-driver = { git = "https://github.com/WaiShe-Project/waishe-driver-sdk", branch = "main" }
+
+[dev-dependencies]
+waishe-driver-replay = { git = "https://github.com/WaiShe-Project/waishe-driver-sdk", branch = "main" }
+
+[profile.release]
+opt-level = "s"
+lto = true
+panic = "abort"
+strip = true
+codegen-units = 1
